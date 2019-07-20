@@ -19,3 +19,12 @@ var freemem = os.freemem();
 console.log(`Total memory: ${totalmem}`);
 console.log(`Free memory: ${freemem}`);
 
+//using file system  in node.js
+
+const fs = require('fs');
+
+fs.readdir('./', function (err,files) {
+    if(err)console.log('error ',err);
+    else console.log(files);
+});
+
