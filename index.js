@@ -28,3 +28,14 @@ fs.readdir('./', function (err,files) {
     else console.log(files);
 });
 
+// using the events module
+
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
+
+emitter.on('messageLogged',function(){
+    console.log('event raised and caught');
+});
+
+
+emitter.emit('messageLogged');
