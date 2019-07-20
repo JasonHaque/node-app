@@ -1,5 +1,3 @@
-function saySomething(name,age){
-    console.log("Hi there "+name+" ;) are you "+age +"? ");
-}
+var logger = require('./logger');
 
-saySomething("jason","21");
+logger.log('message');
